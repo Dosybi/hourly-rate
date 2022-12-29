@@ -1,6 +1,8 @@
-const Input = ({ label, value, unit }) => {
+const Input = ({ label, value, unit, isSmall }) => {
   return (
-    <div className="relative mb-4 flex items-end">
+    <div
+      className={`relative mb-4 flex items-end ${isSmall ? 'w-fit' : 'w-full'}`}
+    >
       <div className="w-full">
         <label className="block text-sm font-medium text-gray-900">
           {label}
