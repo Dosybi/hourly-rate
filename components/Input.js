@@ -1,4 +1,6 @@
-const Input = ({ label, value, unit, isSmall }) => {
+import { HiOutlineTrash } from 'react-icons/hi'
+
+const Input = ({ label, value, unit, isSmall, isEditable }) => {
   return (
     <div
       className={`relative mb-4 flex items-end ${isSmall ? 'w-2/5' : 'w-full'}`}
@@ -15,7 +17,12 @@ const Input = ({ label, value, unit, isSmall }) => {
           // onChange={(e) => handleInputChange(title, e.target.value)}
         />
       </div>
-      <div className="absolute right-4 pb-2">{unit}</div>
+      <div className={`absolute pb-2 ${isEditable ? 'right-14' : 'right-4'}`}>
+        {unit}
+      </div>
+      {isEditable && (
+        <HiOutlineTrash className="ml-4 mb-1 cursor-pointer text-3xl text-gray-400 hover:text-gray-600" />
+      )}
     </div>
   )
 }
