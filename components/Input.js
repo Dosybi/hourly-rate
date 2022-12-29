@@ -1,7 +1,7 @@
 const Input = ({ label, value, unit, isSmall }) => {
   return (
     <div
-      className={`relative mb-4 flex items-end ${isSmall ? 'w-1/3' : 'w-full'}`}
+      className={`relative mb-4 flex items-end ${isSmall ? 'w-2/5' : 'w-full'}`}
     >
       <div className="w-full">
         <label className="block text-sm font-medium text-gray-900">
